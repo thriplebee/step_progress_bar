@@ -1,0 +1,160 @@
+/* ----Reset---- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* ----Common---- */
+body{
+    padding: 50px;
+    height: 100%;
+    background-image: url(https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+li{
+    list-style: none;
+}
+
+/* ----Progress Bar---- */
+.progress{
+    max-width: 1300px;
+    position: relative;
+    width: 100%;
+    background-color: #f55c4b;
+    border-radius: 10px;
+    margin: 250px auto;
+    padding: 50px 30px;
+}
+
+.progress ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress ul li{
+    position: relative;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Image */
+.progress ul li img{
+    max-width: 80px;
+}
+
+/* Icon */
+.progress ul li i{
+    margin: 15px 0;
+    font-size: 1.5rem;
+    background-color: #27ae60;
+    border-radius: 50%;
+    color: #000;
+}
+
+.progress ul .unfinished i{
+    background-color: #c0392b;
+}
+
+.progress ul .pending i{
+    background-color: #f1c40f;
+}
+
+
+/* Title */
+.progress ul li p{
+    font-size: 1.4rem;
+}
+
+/* Bottom Progress Line */
+.progress ul li .bline{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    margin: 20px;
+    background-color: #27ae60;
+}
+
+.progress ul .unfinished .bline{
+    background-color: #fff;
+}
+
+.progress ul .pending .bline{
+    background-color: #f1c40f;
+}
+
+.progress ul li .bfirst{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.progress ul li .blast{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Side Progress Line */
+.progress ul li .sline{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background-color: #27ae60;
+    display: none;
+}
+
+.progress ul .pending .sline{
+    background-color: #f1c40f;
+}
+
+.progress ul .unfinished .sline{
+    background-color: #fff;
+}
+
+.progress ul li .sfirst{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.progress ul li .slast{
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/* ----Responsive---- */
+@media(max-width: 900px){
+    /* ----Progress Bar---- */
+    .progress ul{
+        flex-wrap: wrap;
+    }
+
+    .progress ul li{
+        width: 400px;
+    }
+
+    /* Bottom Progress Line */
+    .progress ul li .bline{
+        display: none;
+    }
+
+    /* Side Progress Line */
+    .progress ul li .sline{
+        display: block;
+    }
+}
